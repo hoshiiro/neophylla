@@ -26,20 +26,25 @@ lspconfig.gopls.setup({
 	},
 })
 
+lspconfig.rust_analyzer.setup({
+	on_attach = function(c, b)
+		ih.on_attach(c, b)
+	end,
+	capabilities = capabilities,
+})
+
 local servers = {
-	'lua_ls',
-	'clangd',
 	'pyright',
+	'clangd',
+
+	'lua_ls',
 	'tsserver',
-	'volar',
-	'rust_analyzer',
-	'zk',
-	'svelte',
 
 	'html',
 	'cssls',
 	'jsonls',
 	'yamlls',
+	'svelte',
 }
 
 for _, lsp in ipairs(servers) do
