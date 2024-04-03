@@ -162,10 +162,11 @@ local lazy_spec = {
 	{
 		'epwalsh/obsidian.nvim',
 		version = '*',
-		ft = 'markdown',
+		ft = { 'markdown', 'text' },
 		dependencies = {
 			{
 				'preservim/vim-pencil',
+				ft = 'gemtext',
 				config = function()
 					vim.g['pencil#wrapModeDefault'] = 'soft'
 					vim.cmd([[call pencil#init()]])
