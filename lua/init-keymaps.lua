@@ -7,6 +7,8 @@ end
 vks('n', '<leader><leader>', ':Telescope find_files<cr>')
 vks('n', '<leader>g', ':Neogit<cr>')
 vks('n', '<leader>w', ':Telescope workspaces<cr>')
+vks('n', '<leader>sh', ':Telescope help_tags<cr>')
+vks('n', '<leader>sg', ':Telescope live_grep<cr>')
 vks('n', '<leader>d', function()
 	require('oil').open_float()
 end)
