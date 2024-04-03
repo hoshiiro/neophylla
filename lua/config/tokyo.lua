@@ -10,6 +10,10 @@ local opts = {
 			bg = c.bg_float,
 			fg = c.bg_float,
 		}
+		hl.TelescopePromptBorder = {
+			bg = c.bg_float,
+			fg = c.bg_float,
+		}
 		hl.TelescopeResultsTitle = {
 			bg = c.fg_gutter,
 			fg = c.teal,
