@@ -18,6 +18,7 @@ o.tabstop = 2
 o.expandtab = true
 o.smartindent = true
 
+o.scrolloff = 20
 o.termguicolors = true
 o.number = true
 -- o.relativenumber = true
