@@ -159,38 +159,6 @@ local lazy_spec = {
 		event = { 'BufRead', 'BufNewFile' },
 		opts = {},
 	},
-	{
-		'epwalsh/obsidian.nvim',
-		version = '*',
-		ft = { 'markdown', 'text' },
-		dependencies = {
-			{
-				'preservim/vim-pencil',
-				ft = 'gemtext',
-				config = function()
-					vim.g['pencil#wrapModeDefault'] = 'soft'
-					vim.cmd([[call pencil#init()]])
-				end,
-			},
-		},
-		config = function()
-			vim.o.conceallevel = 2
-			require('obsidian').setup({
-				workspaces = {
-					{
-						name = 'main',
-						path = '~/notes',
-					},
-				},
-				follow_url_func = function(url)
-					vim.fn.jobstart({ 'xdg-open', url })
-				end,
-				node_id_func = function(title)
-					return title
-				end,
-			})
-		end,
-	},
 }
 
 local lazy_opts = {
