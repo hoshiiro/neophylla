@@ -159,6 +159,15 @@ local lazy_spec = {
 		event = { 'BufRead', 'BufNewFile' },
 		opts = {},
 	},
+	{
+		'preservim/vim-pencil',
+		ft = { 'markdown', 'text', 'gemtext' },
+		config = function()
+			vim.o.conceallevel = 2
+			vim.g['pencil#wrapModeDefault'] = 'soft'
+			vim.cmd([[call pencil#init()]])
+		end,
+	},
 }
 
 local lazy_opts = {
