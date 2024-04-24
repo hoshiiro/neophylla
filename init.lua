@@ -27,11 +27,5 @@ o.cursorline = true
 o.signcolumn = 'no'
 o.ls = 0
 
-vim.cmd([[
-set foldmethod=expr
-set foldexpr=nvim_treesitter#foldexpr()
-set nofoldenable
-]])
-
 require('init-keymaps')
 require('init-lazy')
