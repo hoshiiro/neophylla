@@ -91,7 +91,7 @@ local lazy_spec = {
 	{
 		'b0o/incline.nvim',
 		event = { 'BufRead', 'BufNewFile' },
-		opts = function()
+		config = function()
 			require('config.incline')
 		end,
 	},
@@ -166,6 +166,18 @@ local lazy_spec = {
 			vim.o.conceallevel = 2
 			vim.g['pencil#wrapModeDefault'] = 'soft'
 			vim.cmd([[call pencil#init()]])
+		end,
+	},
+	{
+		'epwalsh/obsidian.nvim',
+		version = '*',
+		ft = { 'markdown' },
+		dependencies = {
+			'preservim/vim-pencil',
+		},
+		config = function()
+			vim.o.conceallevel = 2
+			require('config.obsidian')
 		end,
 	},
 }
